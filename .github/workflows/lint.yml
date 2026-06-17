@@ -46,7 +46,6 @@ jobs:
 
       - name: Allow KVM access
         run: |
-          sudo usermod -a -G kvm runner
           sudo chmod 666 /dev/kvm
 
       - run: nix flake check --max-jobs 1
